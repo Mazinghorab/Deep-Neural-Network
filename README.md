@@ -46,9 +46,12 @@ $$
 
 $$
 \begin{aligned} 
-\frac{\partial L}{\partial W_3} &= a_2^T \delta_3 \\ 
-\frac{\partial L}{\partial W_2} &= a_1^T \delta_2 \\ 
-\frac{\partial L}{\partial W_1} &= X^T \delta_1 
+\frac{\partial L}{\partial W_3} &= a_2^T \delta_4 \\
+\frac{\partial L}{\partial b_3} &= \delta_4 \\
+\frac{\partial L}{\partial W_2} &= a_1^T \delta_3 \\
+\frac{\partial L}{\partial b_2} &= \delta_3 \\
+\frac{\partial L}{\partial W_1} &= x^T \delta_2 \\
+\frac{\partial L}{\partial b_1} &= \delta_2
 \end{aligned}
 $$
 
