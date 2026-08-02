@@ -3,13 +3,13 @@
 ### 1. Overview
 This implementation features a 4-layer deep neural network (Input Layer, 2 Hidden Layers, and Output Layer) built entirely from scratch using Python and NumPy. This is designed to demonstrate the fundamental mechanics of machine learning without relying on high-level frameworks like TensorFlow or PyTorch. It features manual weight initialization, matrix multiplications, forward propagation, and backpropagation via gradient descent.
 
-![Architecture](https://github.com/Mazinghorab/Deep-Neural-Network/The_architecture.png "The architecture")
+![Architecture](https://raw.githubusercontent.com/Mazinghorab/Deep-Neural-Network/main/The_architecture.png "The architecture")
 
 ### 2. Mathematical Foundations
 The network learns by pushing data through successive layers, calculating the error, and propagating that error backward to adjust the weights. Here is the mathematical engine driving the model:
 
 ### Forward Propagation
-The network utilizes the tanh activation function for the hidden layers to introduce non-linearity, and a softmax activation function at the output layer to generate class probabilities.
+The network utilizes the `tanh` activation function for the hidden layers to introduce non-linearity, and a `softmax` activation function at the output layer to generate class probabilities.
 
 $$
 \begin{aligned} 
@@ -55,26 +55,29 @@ $$
 ### 3. Architecture & Matrix Dimensions
 The network architecture requires precise dimensional scaling:
 
-* *$X$ (Input Data):* Shape (num_examples, nn_input_dim)
-* *Layer 1 ($W_1$ & $b_1$):* $W_1$ is initialized as (nn_input_dim, nn_hdim). This maps the raw input features to the first hidden layer. $b_1$ is (1, nn_hdim).
-* *Layer 2 ($W_2$ & $b_2$):* $W_2$ is initialized as (nn_hdim, nn_hdim). This maps the output of the first hidden layer to the second hidden layer. $b_2$ is (1, nn_hdim).
-* *Layer 3 / Output ($W_3$ & $b_3$):* $W_3$ is initialized as (nn_hdim, nn_output_dim). This maps the final hidden representation to the output classes. $b_3$ is (1, nn_output_dim).
+**$X$ (Input Data):** Shape `(num_examples, nn_input_dim)`
+
+**Layer 1 ($W_1$ & $b_1$):** $W_1$ is initialized as `(nn_input_dim, nn_hdim)`. This maps the raw input features to the first hidden layer. $b_1$ is `(1, nn_hdim)`.
+
+**Layer 2 ($W_2$ & $b_2$):** $W_2$ is initialized as `(nn_hdim, nn_hdim)`. This maps the output of the first hidden layer to the second hidden layer. $b_2$ is `(1, nn_hdim)`.
+
+**Layer 3 / Output ($W_3$ & $b_3$):** $W_3$ is initialized as `(nn_hdim, nn_output_dim)`. This maps the final hidden representation to the output classes. $b_3$ is `(1, nn_output_dim)`.
 
 ## 4. Setup and Usage
 To run the neural network on your local machine, follow these steps:
 
 *1. Clone the repository:*
-bash
-git clone [https://github.com/Mazinghorab/Deep-Neural-Network.git](https://github.com/Mazinghorab/Deep-Neural-Network.git)
+```bash
+git clone https://github.com/Mazinghorab/Deep-Neural-Network.git
 cd Deep-Neural-Network
-
+```
 
 *2. Install Dependencies*:
 The code relies on standard scientific computing libraries.
 
-Bash
+```bash
 pip install numpy matplotlib scikit-learn
-
+```
 
 *3. Run the Code*:
-Execute the Jupyter Notebook or Python script to view the training process and the generated decision boundary visualizations.
+Excute the Jupyter Notebook or Python script to view the training process and the generated decision boundary visualizations.
